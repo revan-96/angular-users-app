@@ -12,10 +12,10 @@ export class UsersService {
   constructor(private http: HttpClient) { }
 
   getUsers(): Observable<IUser[]> {
-    return this.http.get<IUser[]>('http://localhost:3000/users');
+    return this.http.get<IUser[]>('http://192.168.43.210:3000/users');
   }
 
   getUsersByID(id: string | null): Promise<IUser> {
-    return this.http.get<IUser>('http://localhost:3000/users' + '/' + id).toPromise();
+    return this.http.get<IUser>('http://192.168.43.210:3000/users' + '/' + id).toPromise();
   }
 }
