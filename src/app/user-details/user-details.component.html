@@ -1,0 +1,36 @@
+<h1 class="header">Details</h1>
+<div *ngIf="user" class="card-container">
+  <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>{{firstName}}</mat-card-title>
+        <mat-card-subtitle>{{lastName}}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <table cellspacing="0">
+          <tr><td>
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" disabled [ngModel]="firstName">
+          </td>
+          <td>
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" disabled [ngModel]="lastName">    
+          </td></tr>
+          <tr><td>
+            <mat-label>Date of Birth</mat-label>
+            <input matInput type="text" disabled [ngModel]="DOB">   
+          </td>
+          <td>
+            <mat-label>Phone</mat-label>
+            <input matInput type="text" disabled [ngModel]="Phone"> 
+          </td> 
+          </tr>
+          <tr><td>
+            <mat-label>Email</mat-label>
+            <input matInput type="text" disabled [ngModel]="Email">
+          </td>
+          </tr>
+        </table>
+      </mat-card-content>
+  </mat-card>
+</div>

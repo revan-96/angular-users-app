@@ -1,0 +1,12 @@
+<h1 class="header">Users</h1>
+<mat-form-field appearance="fill">
+    <mat-select (selectionChange)="userChanged($event)">
+        <mat-option *ngFor="let user of users" [value]="getUserID(user)">
+        {{getUserName(user)}}
+        </mat-option>
+    </mat-select>
+</mat-form-field>
+
+<div class="card-container">
+    <!-- <app-user-details *ngIf="selectedUser" [user]="selectedUser"></app-user-details> -->
+</div>
